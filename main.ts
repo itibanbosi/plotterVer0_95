@@ -445,148 +445,129 @@ namespace eureka_plotter_car {
     led.enable(false);
 
     let i = 0;
-switch(houkou){
-    case plotter_houkou.前:
+    switch(houkou){
+        case plotter_houkou.前:
 
-    for (let index = 0; index <= R_step ;  index++) {
-      pins.digitalWritePin(DigitalPin.P3, 0);
-      pins.digitalWritePin(DigitalPin.P4, 0);
-      pins.digitalWritePin(DigitalPin.P6, 0);
-      pins.digitalWritePin(DigitalPin.P7, 1);
-
-      for (i = 0; i < 1000; i++);
-      {
-      }
-      pins.digitalWritePin(DigitalPin.P3, 0);
-      pins.digitalWritePin(DigitalPin.P4, 0);
-      pins.digitalWritePin(DigitalPin.P6, 1);
-      pins.digitalWritePin(DigitalPin.P7, 1);
-
-      for (i = 0; i < 1000; i++);
-      {
-      }
-      pins.digitalWritePin(DigitalPin.P3, 0);
-      pins.digitalWritePin(DigitalPin.P4, 0);
-      pins.digitalWritePin(DigitalPin.P6, 1);
-      pins.digitalWritePin(DigitalPin.P7, 0);
- 
-      for (i = 0; i < 1000; i++);
-      {
-      }
-      pins.digitalWritePin(DigitalPin.P3, 0);
-      pins.digitalWritePin(DigitalPin.P4, 1);
-      pins.digitalWritePin(DigitalPin.P6, 1);
-      pins.digitalWritePin(DigitalPin.P7, 0);
-
-      for (i = 0; i < 1000; i++);
-      {
-      }
-      pins.digitalWritePin(DigitalPin.P3, 0);
-      pins.digitalWritePin(DigitalPin.P4, 1);
-      pins.digitalWritePin(DigitalPin.P6, 0);
-      pins.digitalWritePin(DigitalPin.P7, 0);
- 
-      for (i = 0; i < 1000; i++);
-      {
-      }
-      pins.digitalWritePin(DigitalPin.P3, 1);
-      pins.digitalWritePin(DigitalPin.P4, 1);
-      pins.digitalWritePin(DigitalPin.P6, 0);
-      pins.digitalWritePin(DigitalPin.P7, 0);
-
-      for (i = 0; i < 1000; i++);
-      {
-      }
-      pins.digitalWritePin(DigitalPin.P3, 1);
-      pins.digitalWritePin(DigitalPin.P4, 0);
-      pins.digitalWritePin(DigitalPin.P6, 0);
-      pins.digitalWritePin(DigitalPin.P7, 0);
-
-      for (i = 0; i < 1000; i++);
-      {
-      }
-      pins.digitalWritePin(DigitalPin.P3, 1);
-      pins.digitalWritePin(DigitalPin.P4, 0);
-      pins.digitalWritePin(DigitalPin.P6, 0);
-      pins.digitalWritePin(DigitalPin.P7, 1);
-
-      for (i = 0; i < 1000; i++);
-      {
-      }
+        for (let index = 0; index <= R_step ;  index++) {
+        pins.digitalWritePin(DigitalPin.P3, 0);
+        pins.digitalWritePin(DigitalPin.P4, 0);
+        pins.digitalWritePin(DigitalPin.P6, 0);
+        pins.digitalWritePin(DigitalPin.P7, 1);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P3, 0);
+        pins.digitalWritePin(DigitalPin.P4, 0);
+        pins.digitalWritePin(DigitalPin.P6, 1);
+        pins.digitalWritePin(DigitalPin.P7, 1);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P3, 0);
+        pins.digitalWritePin(DigitalPin.P4, 0);
+        pins.digitalWritePin(DigitalPin.P6, 1);
+        pins.digitalWritePin(DigitalPin.P7, 0);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P3, 0);
+        pins.digitalWritePin(DigitalPin.P4, 1);
+        pins.digitalWritePin(DigitalPin.P6, 1);
+        pins.digitalWritePin(DigitalPin.P7, 0);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P3, 0);
+        pins.digitalWritePin(DigitalPin.P4, 1);
+        pins.digitalWritePin(DigitalPin.P6, 0);
+        pins.digitalWritePin(DigitalPin.P7, 0);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P3, 1);
+        pins.digitalWritePin(DigitalPin.P4, 1);
+        pins.digitalWritePin(DigitalPin.P6, 0);
+        pins.digitalWritePin(DigitalPin.P7, 0);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P3, 1);
+        pins.digitalWritePin(DigitalPin.P4, 0);
+        pins.digitalWritePin(DigitalPin.P6, 0);
+        pins.digitalWritePin(DigitalPin.P7, 0);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P3, 1);
+        pins.digitalWritePin(DigitalPin.P4, 0);
+        pins.digitalWritePin(DigitalPin.P6, 0);
+        pins.digitalWritePin(DigitalPin.P7, 1);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        return;
     }
-        break;
+
     case plotter_houkou.後:
         for (let index = 0; index <= R_step ;  index++) {
-      pins.digitalWritePin(DigitalPin.P3, 1);
-      pins.digitalWritePin(DigitalPin.P4, 0);
-      pins.digitalWritePin(DigitalPin.P6, 0);
-      pins.digitalWritePin(DigitalPin.P7, 1);
-
-      for (i = 0; i < 1000; i++);
-      {
-      }
-      pins.digitalWritePin(DigitalPin.P3, 1);
-      pins.digitalWritePin(DigitalPin.P4, 0);
-      pins.digitalWritePin(DigitalPin.P6, 0);
-      pins.digitalWritePin(DigitalPin.P7, 0);
-
-      for (i = 0; i < 1000; i++);
-      {
-      }
-      pins.digitalWritePin(DigitalPin.P3, 1);
-      pins.digitalWritePin(DigitalPin.P4, 1);
-      pins.digitalWritePin(DigitalPin.P6, 0);
-      pins.digitalWritePin(DigitalPin.P7, 0);
- 
-      for (i = 0; i < 1000; i++);
-      {
-      }
-      pins.digitalWritePin(DigitalPin.P3, 0);
-      pins.digitalWritePin(DigitalPin.P4, 1);
-      pins.digitalWritePin(DigitalPin.P6, 0);
-      pins.digitalWritePin(DigitalPin.P7, 0);
-
-      for (i = 0; i < 1000; i++);
-      {
-      }
-      pins.digitalWritePin(DigitalPin.P3, 0);
-      pins.digitalWritePin(DigitalPin.P4, 1);
-      pins.digitalWritePin(DigitalPin.P6, 1);
-      pins.digitalWritePin(DigitalPin.P7, 0);
- 
-      for (i = 0; i < 1000; i++);
-      {
-      }
-      pins.digitalWritePin(DigitalPin.P3, 0);
-      pins.digitalWritePin(DigitalPin.P4, 0);
-      pins.digitalWritePin(DigitalPin.P6, 1);
-      pins.digitalWritePin(DigitalPin.P7, 0);
-
-      for (i = 0; i < 1000; i++);
-      {
-      }
-      pins.digitalWritePin(DigitalPin.P3, 0);
-      pins.digitalWritePin(DigitalPin.P4, 0);
-      pins.digitalWritePin(DigitalPin.P6, 1);
-      pins.digitalWritePin(DigitalPin.P7, 1);
-
-      for (i = 0; i < 1000; i++);
-      {
-      }
-      pins.digitalWritePin(DigitalPin.P3, 0);
-      pins.digitalWritePin(DigitalPin.P4, 0);
-      pins.digitalWritePin(DigitalPin.P6, 0);
-      pins.digitalWritePin(DigitalPin.P7, 1);
-
-      for (i = 0; i < 1000; i++);
-      {
-      }
-        break;
+        pins.digitalWritePin(DigitalPin.P3, 1);
+        pins.digitalWritePin(DigitalPin.P4, 0);
+        pins.digitalWritePin(DigitalPin.P6, 0);
+        pins.digitalWritePin(DigitalPin.P7, 1);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P3, 1);
+        pins.digitalWritePin(DigitalPin.P4, 0);
+        pins.digitalWritePin(DigitalPin.P6, 0);
+        pins.digitalWritePin(DigitalPin.P7, 0);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P3, 1);
+        pins.digitalWritePin(DigitalPin.P4, 1);
+        pins.digitalWritePin(DigitalPin.P6, 0);
+        pins.digitalWritePin(DigitalPin.P7, 0);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P3, 0);
+        pins.digitalWritePin(DigitalPin.P4, 1);
+        pins.digitalWritePin(DigitalPin.P6, 0);
+        pins.digitalWritePin(DigitalPin.P7, 0);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P3, 0);
+        pins.digitalWritePin(DigitalPin.P4, 1);
+        pins.digitalWritePin(DigitalPin.P6, 1);
+        pins.digitalWritePin(DigitalPin.P7, 0);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P3, 0);
+        pins.digitalWritePin(DigitalPin.P4, 0);
+        pins.digitalWritePin(DigitalPin.P6, 1);
+        pins.digitalWritePin(DigitalPin.P7, 0);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P3, 0);
+        pins.digitalWritePin(DigitalPin.P4, 0);
+        pins.digitalWritePin(DigitalPin.P6, 1);
+        pins.digitalWritePin(DigitalPin.P7, 1);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P3, 0);
+        pins.digitalWritePin(DigitalPin.P4, 0);
+        pins.digitalWritePin(DigitalPin.P6, 0);
+        pins.digitalWritePin(DigitalPin.P7, 1);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        return;
     }
-
-
-
-
   }
 }
 
