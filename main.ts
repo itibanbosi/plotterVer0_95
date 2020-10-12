@@ -448,7 +448,7 @@ namespace eureka_plotter_car {
     switch(houkou){
         case plotter_houkou.前:
 
-        for (let index = 0; index <= R_step ;  index++) {
+        for (let index = 0; index < R_step ;  index++) {
         pins.digitalWritePin(DigitalPin.P3, 0);
         pins.digitalWritePin(DigitalPin.P4, 0);
         pins.digitalWritePin(DigitalPin.P6, 0);
@@ -509,7 +509,7 @@ namespace eureka_plotter_car {
     }
         return;
     case plotter_houkou.後:
-        for (let index = 0; index <= R_step ;  index++) {
+        for (let index = 0; index < R_step ;  index++) {
         pins.digitalWritePin(DigitalPin.P3, 1);
         pins.digitalWritePin(DigitalPin.P4, 0);
         pins.digitalWritePin(DigitalPin.P6, 0);
@@ -581,7 +581,7 @@ namespace eureka_plotter_car {
     let i = 0;
     switch(houkou){
         case plotter_houkou.前:
-        for (let index = 0; index <= L_step ;  index++) {
+        for (let index = 0; index < L_step ;  index++) {
         pins.digitalWritePin(DigitalPin.P13, 1);
         pins.digitalWritePin(DigitalPin.P14, 0);
         pins.digitalWritePin(DigitalPin.P15, 0);
@@ -641,7 +641,7 @@ namespace eureka_plotter_car {
     }
     return;
         case plotter_houkou.後:
-        for (let index = 0; index <= L_step ;  index++) {
+        for (let index = 0; index < L_step ;  index++) {
         pins.digitalWritePin(DigitalPin.P13, 0);
         pins.digitalWritePin(DigitalPin.P14, 0);
         pins.digitalWritePin(DigitalPin.P15, 0);
