@@ -3,6 +3,13 @@ enum pen_onoff {
   上げる,
   下げる,
 }
+enum plotter_houkou {
+    前,
+    後,
+    }
+
+
+
 
 //% color="#3943c6" block="ﾌﾟﾛｯﾀｰ・ｶｰ" icon="\uf1b9"
 
@@ -432,12 +439,15 @@ namespace eureka_plotter_car {
   }
 
   //% color="#3943c6" weight=64　blockId=plottercar_R_step
-  //% block="右車輪　 |%R_step|ステップ " group="3　基本の動き"
+  //% block="右車輪　 |%R_step|ステップ |%houkou|方向" group="3　基本の動き"
 
-  export function plottercar_R_step(R_step: number): void {
+  export function plottercar_R_step(R_step: number,houkou:plotter_houkou): void {
     led.enable(false);
 
     let i = 0;
+switch(houkou){
+    case plotter_houkou.前:
+
     for (let index = 0; index <= R_step ;  index++) {
       pins.digitalWritePin(DigitalPin.P3, 0);
       pins.digitalWritePin(DigitalPin.P4, 0);
@@ -504,7 +514,80 @@ namespace eureka_plotter_car {
       {
       }
     }
+     case plotter_houkou.後:
+   for (let index = 0; index <= R_step ;  index++) {
+      pins.digitalWritePin(DigitalPin.P3, 1);
+      pins.digitalWritePin(DigitalPin.P4, 0);
+      pins.digitalWritePin(DigitalPin.P6, 0);
+      pins.digitalWritePin(DigitalPin.P7, 1);
+
+      for (i = 0; i < 1000; i++);
+      {
+      }
+      pins.digitalWritePin(DigitalPin.P3, 1);
+      pins.digitalWritePin(DigitalPin.P4, 0);
+      pins.digitalWritePin(DigitalPin.P6, 0);
+      pins.digitalWritePin(DigitalPin.P7, 0);
+
+      for (i = 0; i < 1000; i++);
+      {
+      }
+      pins.digitalWritePin(DigitalPin.P3, 1);
+      pins.digitalWritePin(DigitalPin.P4, 1);
+      pins.digitalWritePin(DigitalPin.P6, 0);
+      pins.digitalWritePin(DigitalPin.P7, 0);
+ 
+      for (i = 0; i < 1000; i++);
+      {
+      }
+      pins.digitalWritePin(DigitalPin.P3, 0);
+      pins.digitalWritePin(DigitalPin.P4, 1);
+      pins.digitalWritePin(DigitalPin.P6, 0);
+      pins.digitalWritePin(DigitalPin.P7, 0);
+
+      for (i = 0; i < 1000; i++);
+      {
+      }
+      pins.digitalWritePin(DigitalPin.P3, 0);
+      pins.digitalWritePin(DigitalPin.P4, 1);
+      pins.digitalWritePin(DigitalPin.P6, 1);
+      pins.digitalWritePin(DigitalPin.P7, 0);
+ 
+      for (i = 0; i < 1000; i++);
+      {
+      }
+      pins.digitalWritePin(DigitalPin.P3, 0);
+      pins.digitalWritePin(DigitalPin.P4, 0);
+      pins.digitalWritePin(DigitalPin.P6, 1);
+      pins.digitalWritePin(DigitalPin.P7, 0);
+
+      for (i = 0; i < 1000; i++);
+      {
+      }
+      pins.digitalWritePin(DigitalPin.P3, 0);
+      pins.digitalWritePin(DigitalPin.P4, 0);
+      pins.digitalWritePin(DigitalPin.P6, 1);
+      pins.digitalWritePin(DigitalPin.P7, 1);
+
+      for (i = 0; i < 1000; i++);
+      {
+      }
+      pins.digitalWritePin(DigitalPin.P3, 0);
+      pins.digitalWritePin(DigitalPin.P4, 0);
+      pins.digitalWritePin(DigitalPin.P6, 0);
+      pins.digitalWritePin(DigitalPin.P7, 1);
+
+      for (i = 0; i < 1000; i++);
+      {
+      }
+
+    }
+
+
+
+
   }
+}
 
 
   //% color="#3943c6" weight=64　blockId=plottercar_L_step
