@@ -514,6 +514,7 @@ switch(houkou){
       {
       }
     }
+        break;
     case plotter_houkou.後:
         for (let index = 0; index <= R_step ;  index++) {
       pins.digitalWritePin(DigitalPin.P3, 1);
@@ -580,7 +581,7 @@ switch(houkou){
       for (i = 0; i < 1000; i++);
       {
       }
-
+        break;
     }
 
 
