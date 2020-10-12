@@ -505,9 +505,9 @@ namespace eureka_plotter_car {
         for (i = 0; i < 1000; i++);
         {
         }
-        return;
-    }
 
+    }
+        return;
     case plotter_houkou.後:
         for (let index = 0; index <= R_step ;  index++) {
         pins.digitalWritePin(DigitalPin.P3, 1);
@@ -566,8 +566,9 @@ namespace eureka_plotter_car {
         for (i = 0; i < 1000; i++);
         {
         }
-        return;
+
     }
+        return;
   }
 }
 
