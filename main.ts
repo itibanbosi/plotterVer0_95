@@ -20,7 +20,7 @@ namespace eureka_plotter_car {
   export function plottercar_forward(F_cm: number): void {
     led.enable(false);
     let i=0;
-    for (let index = 0; index < (F_cm / 18.2) * 512; index++) {
+    for (let index = 0; index < (F_cm / 18.9) * 512; index++) {
 
 
       pins.digitalWritePin(DigitalPin.P3, 0);
@@ -123,7 +123,7 @@ namespace eureka_plotter_car {
   export function plottercar_back(F_cm: number): void {
     led.enable(false);
     let i=0;
-    for (let index = 0; index < (F_cm / 18.2) * 512; index++) {
+    for (let index = 0; index < (F_cm / 18.9) * 512; index++) {
 
 
       pins.digitalWritePin(DigitalPin.P3, 1);
