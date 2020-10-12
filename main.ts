@@ -572,82 +572,138 @@ namespace eureka_plotter_car {
   }
 }
 
-
   //% color="#3943c6" weight=64　blockId=plottercar_L_step
-  //% block="左車輪　 |%L_step|ステップ " group="3　基本の動き"
-  export function plottercar_L_step(L_step: number): void {
+  //% block="左車輪　 |%L_step|ステップ |%houkou|方向" group="3　基本の動き"
+
+  export function plottercar_L_step(L_step: number,houkou:plotter_houkou): void {
     led.enable(false);
 
     let i = 0;
-    for (let index = 0; index <= L_step ;  index++) {
-
-      pins.digitalWritePin(DigitalPin.P13, 1);
-      pins.digitalWritePin(DigitalPin.P14, 0);
-      pins.digitalWritePin(DigitalPin.P15, 0);
-      pins.digitalWritePin(DigitalPin.P16, 1);
-
-      for (i = 0; i < 1000; i++);
-      {
-      }
-
-      pins.digitalWritePin(DigitalPin.P13, 1);
-      pins.digitalWritePin(DigitalPin.P14, 0);
-      pins.digitalWritePin(DigitalPin.P15, 0);
-      pins.digitalWritePin(DigitalPin.P16, 0);
-      for (i = 0; i < 1000; i++);
-      {
-      }
-
-      pins.digitalWritePin(DigitalPin.P13, 1);
-      pins.digitalWritePin(DigitalPin.P14, 1);
-      pins.digitalWritePin(DigitalPin.P15, 0);
-      pins.digitalWritePin(DigitalPin.P16, 0);
-      for (i = 0; i < 1000; i++);
-      {
-      }
-
-      pins.digitalWritePin(DigitalPin.P13, 0);
-      pins.digitalWritePin(DigitalPin.P14, 1);
-      pins.digitalWritePin(DigitalPin.P15, 0);
-      pins.digitalWritePin(DigitalPin.P16, 0);
-      for (i = 0; i < 1000; i++);
-      {
-      }
-
-      pins.digitalWritePin(DigitalPin.P13, 0);
-      pins.digitalWritePin(DigitalPin.P14, 1);
-      pins.digitalWritePin(DigitalPin.P15, 1);
-      pins.digitalWritePin(DigitalPin.P16, 0);
-      for (i = 0; i < 1000; i++);
-      {
-      }
-
-      pins.digitalWritePin(DigitalPin.P13, 0);
-      pins.digitalWritePin(DigitalPin.P14, 0);
-      pins.digitalWritePin(DigitalPin.P15, 1);
-      pins.digitalWritePin(DigitalPin.P16, 0);
-      for (i = 0; i < 1000; i++);
-      {
-      }
-
-      pins.digitalWritePin(DigitalPin.P13, 0);
-      pins.digitalWritePin(DigitalPin.P14, 0);
-      pins.digitalWritePin(DigitalPin.P15, 1);
-      pins.digitalWritePin(DigitalPin.P16, 1);
-      for (i = 0; i < 1000; i++);
-      {
-      }
-
-      pins.digitalWritePin(DigitalPin.P13, 0);
-      pins.digitalWritePin(DigitalPin.P14, 0);
-      pins.digitalWritePin(DigitalPin.P15, 0);
-      pins.digitalWritePin(DigitalPin.P16, 1);
-      for (i = 0; i < 1000; i++);
-      {
-      }
-
+    switch(houkou){
+        case plotter_houkou.前:
+        for (let index = 0; index <= L_step ;  index++) {
+        pins.digitalWritePin(DigitalPin.P13, 1);
+        pins.digitalWritePin(DigitalPin.P14, 0);
+        pins.digitalWritePin(DigitalPin.P15, 0);
+        pins.digitalWritePin(DigitalPin.P16, 1);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P13, 1);
+        pins.digitalWritePin(DigitalPin.P14, 0);
+        pins.digitalWritePin(DigitalPin.P15, 0);
+        pins.digitalWritePin(DigitalPin.P16, 0);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P13, 1);
+        pins.digitalWritePin(DigitalPin.P14, 1);
+        pins.digitalWritePin(DigitalPin.P15, 0);
+        pins.digitalWritePin(DigitalPin.P16, 0);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P13, 0);
+        pins.digitalWritePin(DigitalPin.P14, 1);
+        pins.digitalWritePin(DigitalPin.P15, 0);
+        pins.digitalWritePin(DigitalPin.P16, 0);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P13, 0);
+        pins.digitalWritePin(DigitalPin.P14, 1);
+        pins.digitalWritePin(DigitalPin.P15, 1);
+        pins.digitalWritePin(DigitalPin.P16, 0);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P13, 0);
+        pins.digitalWritePin(DigitalPin.P14, 0);
+        pins.digitalWritePin(DigitalPin.P15, 1);
+        pins.digitalWritePin(DigitalPin.P16, 0);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P13, 0);
+        pins.digitalWritePin(DigitalPin.P14, 0);
+        pins.digitalWritePin(DigitalPin.P15, 1);
+        pins.digitalWritePin(DigitalPin.P16, 1);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P13, 0);
+        pins.digitalWritePin(DigitalPin.P14, 0);
+        pins.digitalWritePin(DigitalPin.P15, 0);
+        pins.digitalWritePin(DigitalPin.P16, 1);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+    }
+    return;
+        case plotter_houkou.後:
+        for (let index = 0; index <= L_step ;  index++) {
+        pins.digitalWritePin(DigitalPin.P13, 0);
+        pins.digitalWritePin(DigitalPin.P14, 0);
+        pins.digitalWritePin(DigitalPin.P15, 0);
+        pins.digitalWritePin(DigitalPin.P16, 1);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P13, 0);
+        pins.digitalWritePin(DigitalPin.P14, 0);
+        pins.digitalWritePin(DigitalPin.P15, 1);
+        pins.digitalWritePin(DigitalPin.P16, 1);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P13, 0);
+        pins.digitalWritePin(DigitalPin.P14, 0);
+        pins.digitalWritePin(DigitalPin.P15, 1);
+        pins.digitalWritePin(DigitalPin.P16, 0);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P13, 0);
+        pins.digitalWritePin(DigitalPin.P14, 1);
+        pins.digitalWritePin(DigitalPin.P15, 1);
+        pins.digitalWritePin(DigitalPin.P16, 0);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P13, 0);
+        pins.digitalWritePin(DigitalPin.P14, 1);
+        pins.digitalWritePin(DigitalPin.P15, 0);
+        pins.digitalWritePin(DigitalPin.P16, 0);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P13, 1);
+        pins.digitalWritePin(DigitalPin.P14, 1);
+        pins.digitalWritePin(DigitalPin.P15, 0);
+        pins.digitalWritePin(DigitalPin.P16, 0);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P13, 1);
+        pins.digitalWritePin(DigitalPin.P14, 0);
+        pins.digitalWritePin(DigitalPin.P15, 0);
+        pins.digitalWritePin(DigitalPin.P16, 0);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+        pins.digitalWritePin(DigitalPin.P13, 1);
+        pins.digitalWritePin(DigitalPin.P14, 0);
+        pins.digitalWritePin(DigitalPin.P15, 0);
+        pins.digitalWritePin(DigitalPin.P16, 1);
+        for (i = 0; i < 1000; i++);
+        {
+        }
+     }
+    return;
     }
   }
+
+
 
 
 
