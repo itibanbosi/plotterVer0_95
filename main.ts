@@ -432,6 +432,161 @@ namespace eureka_plotter_car {
     }
   }
 
+  //% color="#3943c6" weight=64　blockId=plottercar_R_step
+  //% block="右車輪　 |%R_step|ステップ " group="3　基本の動き"
+
+  export function plottercar_R_step(R_step: number): void {
+    led.enable(false);
+
+    let i = 0;
+
+    for (let index = 0; index <= R_step; index++) {
+      pins.digitalWritePin(DigitalPin.P3, 0);
+      pins.digitalWritePin(DigitalPin.P4, 0);
+      pins.digitalWritePin(DigitalPin.P6, 0);
+      pins.digitalWritePin(DigitalPin.P7, 1);
+
+      for (i = 0; i < 1000; i++);
+      {
+      }
+      pins.digitalWritePin(DigitalPin.P3, 0);
+      pins.digitalWritePin(DigitalPin.P4, 0);
+      pins.digitalWritePin(DigitalPin.P6, 1);
+      pins.digitalWritePin(DigitalPin.P7, 1);
+
+      for (i = 0; i < 1000; i++);
+      {
+      }
+      pins.digitalWritePin(DigitalPin.P3, 0);
+      pins.digitalWritePin(DigitalPin.P4, 0);
+      pins.digitalWritePin(DigitalPin.P6, 1);
+      pins.digitalWritePin(DigitalPin.P7, 0);
+
+      for (i = 0; i < 1000; i++);
+      {
+      }
+      pins.digitalWritePin(DigitalPin.P3, 0);
+      pins.digitalWritePin(DigitalPin.P4, 1);
+      pins.digitalWritePin(DigitalPin.P6, 1);
+      pins.digitalWritePin(DigitalPin.P7, 0);
+
+      for (i = 0; i < 1000; i++);
+      {
+      }
+      pins.digitalWritePin(DigitalPin.P3, 0);
+      pins.digitalWritePin(DigitalPin.P4, 1);
+      pins.digitalWritePin(DigitalPin.P6, 0);
+      pins.digitalWritePin(DigitalPin.P7, 0);
+
+      for (i = 0; i < 1000; i++);
+      {
+      }
+      pins.digitalWritePin(DigitalPin.P3, 1);
+      pins.digitalWritePin(DigitalPin.P4, 1);
+      pins.digitalWritePin(DigitalPin.P6, 0);
+      pins.digitalWritePin(DigitalPin.P7, 0);
+
+      for (i = 0; i < 1000; i++);
+      {
+      }
+      pins.digitalWritePin(DigitalPin.P3, 1);
+      pins.digitalWritePin(DigitalPin.P4, 0);
+      pins.digitalWritePin(DigitalPin.P6, 0);
+      pins.digitalWritePin(DigitalPin.P7, 0);
+
+      for (i = 0; i < 1000; i++);
+      {
+      }
+      pins.digitalWritePin(DigitalPin.P3, 1);
+      pins.digitalWritePin(DigitalPin.P4, 0);
+      pins.digitalWritePin(DigitalPin.P6, 0);
+      pins.digitalWritePin(DigitalPin.P7, 1);
+
+      for (i = 0; i < 1000; i++);
+      {
+      }
+    }
+  }
+
+
+  //% color="#3943c6" weight=64　blockId=plottercar_L_step
+  //% block="左車輪　 |%L_step|ステップ " group="3　基本の動き"
+  export function plottercar_L_step(L_step: number): void {
+    led.enable(false);
+
+    let i = 0;
+    for (let index = 0; index <= L_step ;  index++) {
+
+      pins.digitalWritePin(DigitalPin.P13, 0);
+      pins.digitalWritePin(DigitalPin.P14, 0);
+      pins.digitalWritePin(DigitalPin.P15, 0);
+      pins.digitalWritePin(DigitalPin.P16, 1);
+
+      for (i = 0; i < 1000; i++);
+      {
+      }
+
+      pins.digitalWritePin(DigitalPin.P13, 0);
+      pins.digitalWritePin(DigitalPin.P14, 0);
+      pins.digitalWritePin(DigitalPin.P15, 1);
+      pins.digitalWritePin(DigitalPin.P16, 1);
+      for (i = 0; i < 1000; i++);
+      {
+      }
+
+      pins.digitalWritePin(DigitalPin.P13, 0);
+      pins.digitalWritePin(DigitalPin.P14, 0);
+      pins.digitalWritePin(DigitalPin.P15, 1);
+      pins.digitalWritePin(DigitalPin.P16, 0);
+      for (i = 0; i < 1000; i++);
+      {
+      }
+
+      pins.digitalWritePin(DigitalPin.P13, 0);
+      pins.digitalWritePin(DigitalPin.P14, 1);
+      pins.digitalWritePin(DigitalPin.P15, 1);
+      pins.digitalWritePin(DigitalPin.P16, 0);
+      for (i = 0; i < 1000; i++);
+      {
+      }
+
+      pins.digitalWritePin(DigitalPin.P13, 0);
+      pins.digitalWritePin(DigitalPin.P14, 1);
+      pins.digitalWritePin(DigitalPin.P15, 0);
+      pins.digitalWritePin(DigitalPin.P16, 0);
+      for (i = 0; i < 1000; i++);
+      {
+      }
+
+      pins.digitalWritePin(DigitalPin.P13, 1);
+      pins.digitalWritePin(DigitalPin.P14, 1);
+      pins.digitalWritePin(DigitalPin.P15, 0);
+      pins.digitalWritePin(DigitalPin.P16, 0);
+      for (i = 0; i < 1000; i++);
+      {
+      }
+
+      pins.digitalWritePin(DigitalPin.P13, 1);
+      pins.digitalWritePin(DigitalPin.P14, 0);
+      pins.digitalWritePin(DigitalPin.P15, 0);
+      pins.digitalWritePin(DigitalPin.P16, 0);
+      for (i = 0; i < 1000; i++);
+      {
+      }
+
+      pins.digitalWritePin(DigitalPin.P13, 1);
+      pins.digitalWritePin(DigitalPin.P14, 0);
+      pins.digitalWritePin(DigitalPin.P15, 0);
+      pins.digitalWritePin(DigitalPin.P16, 1);
+      for (i = 0; i < 1000; i++);
+      {
+      }
+
+    }
+  }
+
+
+
   //% color="#525252" weight=90 blockId=eureka_relay block="ペン |%mode| " group="4_ペンの状態"
   export function plottercar_pen(mode: pen_onoff) {
     if (mode == pen_onoff.下げる) {
