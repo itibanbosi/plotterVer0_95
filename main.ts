@@ -1,7 +1,7 @@
 let wait = 0;
 enum pen_onoff {
-  上げる,
   下げる,
+  上げる,
 }
 enum plotter_houkou {
     前,
