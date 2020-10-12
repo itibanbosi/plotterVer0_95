@@ -11,7 +11,7 @@ enum plotter_houkou {
 
 
 
-//% color="#3943c6" block="ﾌﾟﾛｯﾀｰ・ｶｰ" icon="\uf1b9"
+//% color="#3943c6" block="ﾌﾟﾛｯﾀｰ・ｶｰVer0.95" icon="\uf1b9"
 
 namespace eureka_plotter_car {
   //% color="#3943c6" weight=71　blockId=plottercar_forward
@@ -707,7 +707,7 @@ namespace eureka_plotter_car {
 
 
 
-  //% color="#009A00" weight=90 blockId=eureka_relay block="ペン |%mode| " group="4_ペンの状態"
+  //% color="#009CA0" weight=90 blockId=eureka_relay block="ペン |%mode| " group="4_ペンの状態"
   export function plottercar_pen(mode: pen_onoff) {
     if (mode == pen_onoff.下げる) {
       pins.servoWritePin(AnalogPin.P8, 0);
